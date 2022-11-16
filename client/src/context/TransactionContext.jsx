@@ -27,9 +27,9 @@ export const TransactionProvider = ({ children }) => {
     const getAllTransactions = async () => {
         try {
           if (!ethereum) return alert("Please install metamask"); 
-          const transactionContract = getEthereumContract();  
-          const availableTransactions = await transactionContract.getAllTransactions();
-        const structuredTransactions = availableTransactions.map((transaction) => ({
+            const transactionContract = getEthereumContract();  
+            const availableTransactions = await transactionContract.getAllTransactions();
+            const structuredTransactions = availableTransactions.map((transaction) => ({
             addressTo: transaction.receiver,
             addressFrom: transaction.sender,
             timestamp: new Data(transaction.timestamp.toNumber() * 1000).toLocalString(),
@@ -102,7 +102,7 @@ export const TransactionProvider = ({ children }) => {
         console.log(`Success - ${transactionHash.hash}`);    
         const transactionCount = await transactionContract.getTransactionCount();
         
-        setTransactionCount(transactionCount.toNumber());
+        settransactionCount(transactionCount.toNumber());
         window.reload();
         } catch (error) {
             console.log(error);
