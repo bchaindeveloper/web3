@@ -22,7 +22,7 @@ CSS
 Download/Extract
 cd client
 npm install
-npm start
+npm run dev
 ```
 
 ## Contribute:
