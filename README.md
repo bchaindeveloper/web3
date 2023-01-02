@@ -20,7 +20,7 @@ CSS
 
 ```
 Download/Extract
-cd realtor_app
+cd client
 npm install
 npm start
 ```
